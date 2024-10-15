@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';  // prop-types 패키지를 임포트
+import PropTypes from 'prop-types';
 
 // 기본 버튼 컴포넌트
 // variant = 'primary',  // 색상 선택을 위한 prop
@@ -16,14 +16,13 @@ const Button = (
 
     // 크기별 Tailwind 스타일
     const sizeStyles = {
-        sm: '',
-        md: 'btn-em-responsive',
-        lg: '',
-        xl: '',
+        sm: 'text-sm py-1 px-2 w-24', // sm:w-32
+        md: 'text-sm py-1 px-4 w-36', //sm:w-32
+        lg: 'text-lg py-1 px-6 w-52', //md:w-48
+        xl: 'text-lg py-1 px-8 w-72', //lg:w-56
     };
 
     // 결합된 클래스들
-    // ${variantStyles[variant]}             /* 색상 */
     const buttonClass = `
     /* 크기 */
     ${sizeStyles[size]}         
@@ -54,14 +53,13 @@ const Button = (
     );
 };
 
-// PropTypes 정의
 Button.propTypes = {
-    label: PropTypes.string.isRequired, // label은 필수 문자열
-    onClick: PropTypes.func, // onClick은 함수
-    type: PropTypes.string, // type은 문자열
-    disabled: PropTypes.bool, // disabled는 불리언
-    className: PropTypes.string, // className은 문자열
-    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),  // 크기 선택 가능
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
+    type: PropTypes.string,
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
 };
 
 export default Button;
