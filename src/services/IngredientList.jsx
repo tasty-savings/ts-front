@@ -42,7 +42,15 @@ const info = [
     }
 ];
 
-const IngredientList = () => {
+const IngredientList = (
+    {
+        className,
+    }) => {
+
+    const combinedClass = `
+    ${className}
+    `;
+
     const ingredients = info.map((ingredient, index) => (
         <IngredientItem
             key={index}
@@ -52,8 +60,12 @@ const IngredientList = () => {
     ));
 
     return (
-        <TitleWithItems title='요리 재료' items={ingredients}/>
+        <TitleWithItems title='요리 재료' items={ingredients} className={combinedClass}/>
     );
 };
+
+IngredientList.propTypes = {
+    className: PropTypes.string,
+}
 
 export default IngredientList;
