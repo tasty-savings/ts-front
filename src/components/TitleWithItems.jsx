@@ -23,7 +23,7 @@ const TitleWithItems = (
 
 TitleWithItems.propTypes = {
     title: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.elementType).isRequired
+    items: PropTypes.arrayOf(PropTypes.element).isRequired
 }
 
 export default TitleWithItems;
