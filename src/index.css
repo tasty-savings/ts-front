@@ -76,7 +76,7 @@ h3 {
 }
 
 body {
-  @apply m-0 flex items-center justify-center min-w-[320px] min-h-screen max-w-[1280px];
+  @apply m-0 flex items-center justify-center min-w-[320px] min-h-screen max-w-body;
 
   /* dev style */
   @apply border border-white;
