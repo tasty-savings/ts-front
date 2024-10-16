@@ -15,6 +15,12 @@ export default {
           }
         },
       },
+      maxWidth: {
+        'body': '1280px', // body에 사용할 max-width를 정의
+      },
+      screens: {
+        'max-body': { 'max': '1200px' }, // 특정 요소의 미디어 쿼리에서 사용 가능
+      },
     },
   },
   plugins: [],
