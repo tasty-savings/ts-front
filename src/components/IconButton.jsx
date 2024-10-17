@@ -7,6 +7,7 @@ const IconButton = (
         icon,
         label,
         onClick = () => {},
+        id,
         disabled = false,
         className = ''
     }) => {
@@ -16,6 +17,7 @@ const IconButton = (
             onClick={onClick}
             aria-label={label}
             disabled={disabled}
+            id={id}
         >
             {renderElement(icon)}
         </button>
@@ -28,6 +30,7 @@ IconButton.propTypes = {
     onClick: PropTypes.func, // 버튼 클릭 시 호출될 함수
     disabled: PropTypes.bool,
     className: PropTypes.string, // 추가적인 Tailwind 클래스
+    id: PropTypes.string,
 };
 
 
